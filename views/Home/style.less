@@ -1,0 +1,446 @@
+// 轮播图
+.tenzont-carousel-bg {
+  height: 417px;
+  .el-carousel__indicators {
+    bottom: 24px;
+  }
+  .el-carousel__button {
+    height: 4px;
+    border-radius: 2px;
+  }
+  .el-carousel__container {
+    height: 417px !important;
+    text-align: center;
+    .item-img-cover0{
+      text-align: center;
+      background: linear-gradient(to bottom, #54abf8 0%,#218ff0 100%); 
+      background: -moz-linear-gradient(top, #54abf8 0%, #218ff0 100%); 
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#54abf8), color-stop(100%,#218ff0)); 
+      background: -webkit-linear-gradient(top, #54abf8 0%,#218ff0 100%); 
+      background: -o-linear-gradient(top, #54abf8 0%,#218ff0 100%); 
+      background: -ms-linear-gradient(top, #54abf8 0%,#218ff0 100%); 
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54abf8', endColorstr='#218ff0',GradientType=1); 
+    }
+    .item-img-cover1{
+      text-align: center;
+      background: linear-gradient(to bottom, #74ccf4 0%,#a5def5 100%); 
+      background: -moz-linear-gradient(top, #74ccf4 0%, #a5def5 100%); 
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#74ccf4), color-stop(100%,#a5def5)); 
+      background: -webkit-linear-gradient(top, #74ccf4 0%,#a5def5 100%); 
+      background: -o-linear-gradient(top, #74ccf4 0%,#a5def5 100%); 
+      background: -ms-linear-gradient(top, #74ccf4 0%,#a5def5 100%); 
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#74ccf4', endColorstr='#a5def5',GradientType=1);
+    }
+  }
+}
+:root .item-img-cover0,
+:root .item-img-cover1{
+  filter:none;
+} 
+.home {
+  margin-top: 42px;
+}
+// 轮播图下面的广告
+.tenzont-ads-bg {
+  background-color: #fff;
+  width: 100%;
+  .tenzont-ads {
+    width: 1180px;
+    margin: 0 auto;
+    height: 94px;
+    position: relative;
+    ul {
+      overflow: hidden;
+      .ads-item {
+        float: left;
+        width: 33.33%;
+        padding: 27px 0;
+        .ads-item-left {
+          width: 38px;
+          height: 38px;
+          vertical-align: text-bottom;
+        }
+        .ads-item-right {
+          margin-left: 15px;
+          display: inline-block;
+          strong {
+            color: #283c53;
+            font-size: 16px;
+          }
+          p {
+            color: #50729b;
+            font-size: 14px;
+          }
+        }
+      }
+      .ads-item1 {
+        text-align: center;
+        .ads-item-right {
+          text-align: left;
+        }
+      }
+      .ads-item2 {
+        text-align: right;
+        .ads-item-right {
+          text-align: left;
+        }
+      }
+    }
+    // 酒店预订框
+    .tenzont-tap{
+      position: absolute;
+      left: 0;
+      bottom: 389px;
+      background-color: #ffffff;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      height: 65px;
+      width: 428px;
+      margin-bottom: 20px;
+      z-index: 999;
+      .tenzont-tap-items{
+        width: 428px;
+        margin: 0 auto;
+        height: 65px;
+        line-height: 65px;
+        font-size: 15px;
+        .tap-item{
+          display: inline-block;
+          width: 214px;
+          cursor: pointer;
+          font-size: 22px;
+          text-align: center;
+          font-weight: 600;
+          img {
+            width: 214px;
+          }
+        }  
+      }
+    }
+    .tenzont-hotel-book {
+      font-family: tahoma, arial, 'pingfang sc', 'Hiragino Sans GB', sans-serif;
+      position: absolute;
+      left: 0;
+      bottom: 129px;
+      z-index: 2;
+      background-color: #fff;
+      border-radius: 6px;
+      padding: 25px;
+      color: #58666e;
+      width: 428px;
+      box-sizing: border-box;
+      h2 {
+        font-size: 20px;
+        font-weight: normal;
+        margin-bottom: 20px;
+      }
+      .hotel-book-div {
+        width: 100%;
+        height: 45px;
+        border-radius: 3px;
+        border: 0.5px solid #DFE6F3;
+        margin-bottom: 20px;
+        line-height: 45px;
+        box-sizing: border-box;
+        font-size: 14px;
+        background-color: #f3f6fb;
+        &[data-status=true] {
+          background-color: #fff;
+          border-color: #adbad0;
+        }
+        .hotel-book-option {
+          width: 60px;
+          text-align: center;
+          display: inline-block;
+          color: #a5afc0;
+          transform: translateY(-1.5px);
+        }
+        input {
+          text-indent: 10px;
+          background-color: #f3f6fb;
+          outline: none;
+          border: none;
+          display: inline-block;
+          font-weight: 400;
+          font-size: 16px;
+          font-family: tahoma, arial, 'pingfang sc', 'Hiragino Sans GB', sans-serif;
+          &::-webkit-input-placeholder {
+            color: #b5c0d1;
+          }
+          &:ms-input-placeholder {
+            color: #b5c0d1;
+          }
+          &:moz-placeholder {
+            color: #b5c0d1;
+          }
+        }
+      }
+      .hotel-book-address{
+        position: relative;
+        .city-list-wrapper{
+          left: 60px;
+          .input-cover{
+            width: 316px;
+            height: 41px;
+            &:focus {
+              background-color: #fff;
+            }
+          }
+        }
+      }
+      .hotel-book-time {
+        overflow: hidden;
+        .book-time-div {
+          float: left;
+          width: 50%;
+          box-sizing: border-box;
+          &.active {
+            background-color: #fff;
+            border-color: #adbad0;
+          }
+          .book-time {
+            width: 127px;
+            input {
+              padding: 0;
+            }
+            .time-icon {
+              display: none;
+            }
+            &.active {
+              input {
+                background-color: #fff;
+              }
+            }
+          }
+        }
+        .book-startdate {
+          border-right: 0.5px solid #DFE6F3;
+        }
+        .book-enddate {
+          .book-time {
+            width: 128px;
+          }
+        }
+      }
+      .hotel-book-star {
+        .book-star-select {
+          width: 316px;
+          input {
+            padding-left: 0;
+          }
+          &.active {
+            input {
+              background-color: #fff;
+            }
+          }
+        }
+      }
+      .hotel-book-selecfill {
+        width: 228px;
+        position: relative;
+        margin-bottom: 0;
+        input{
+          width: 223px;
+          margin-left: 3px;
+          font-size: 16px;
+          &:focus {
+            background-color: #fff;
+          }
+        }
+        input::-webkit-input-placeholder {
+          font-size: 14px;
+        }
+        .book-search-cover{
+          overflow: hidden;
+          position: absolute;
+          left: 248px;
+          top: 0;
+          border-radius: 3px;
+          width: 130px;
+          height: 44px;
+          line-height: 44px;
+          font-size: 16px;
+          .book-search {
+            width: 100%;
+            height: 100%;
+            font-size: 16px;
+            line-height: 44px;
+            text-align: center;
+            background: linear-gradient(to right, #56A1FF,#1A82FF); 
+            background: -moz-linear-gradient(left, #56A1FF, #1A82FF); 
+            background: -webkit-gradient(linear, left, right, color-stop(#56A1FF), color-stop(#1A82FF)); 
+            background: -webkit-linear-gradient(left, #56A1FF,#1A82FF); 
+            background: -o-linear-gradient(left, #56A1FF,#1A82FF); 
+            background: -ms-linear-gradient(left, #56A1FF,#1A82FF); 
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#56A1FF', endColorstr='#1A82FF',GradientType=1); 
+            color: #fff;
+            font-family: tahoma, arial, 'pingfang sc', 'Hiragino Sans GB', sans-serif;
+            border: none;
+            outline: none;
+            &:hover {
+              opacity: 0.9;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// 展示酒店列表
+.tenzont-hotel-show-bg {
+
+  background-color: #f5f6f8;
+  .tenzont-hotel-show{
+    width: 1180px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 50px;
+    .hotel-show-content {
+      margin: 70px 0 0 0;
+      .hotel-show-items {
+        margin-right: -10px;
+      }
+    }
+  }
+}
+// 新 首页推荐酒店样式
+.tenzont-hotel-wrapper{
+  padding-top: 30px;
+  header{
+    width: 1180px;
+    margin: 0 auto;
+    height: 23px;
+    .left{
+      float: left;
+      border-bottom: 3px solid #57a2ff;
+      padding-bottom: 14px;
+      img{
+        width: 36px;
+        height: 36px;
+        vertical-align: bottom;
+      }
+      span{
+        font-size: 24px;
+        font-weight: bold;
+        color: #2c8cff;
+        padding-left: 10px;
+      }
+    }
+    .right{
+      float: right;
+      position: relative;
+      .right-citys{
+        display: inline-block;
+        .citys-item{
+          display: inline-block;
+          font-size: 17px;
+          color: #aebdcd;
+          margin-right: 24px;
+          padding-bottom: 17px;
+          cursor: pointer;
+        }
+        .is-search{
+          color: #1982ff;
+          border-bottom: 2px solid #1982ff;
+        }
+      }
+      .input-cover{
+        position: relative;
+        img{
+          width: 15px;
+          height: 15px;
+          position: absolute;
+          left: 14px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        input{
+          border: none;
+          outline: none;
+          width: 132px;
+          height: 41px;
+          box-sizing: border-box;
+          padding: 12px 14px 12px 36px;
+          background-color: #f3f6fb;
+          border-radius: 6px;
+          font-size: 16px;
+          &::-webkit-input-placeholder {
+            color: #b5c0d1;
+            font-size: 16px;
+          }
+          &:ms-input-placeholder {
+            color: #aebdcd;
+            font-size: 16px;
+          }
+          &:moz-placeholder {
+            color: #aebdcd;
+            font-size: 16px;
+          }
+        }
+      }
+      .search-result-list{
+        position: absolute;
+        top: 40px;
+        right: 0;
+        z-index: 2;
+        background-color: #fff;
+        border: 0.5px solid #9cd9ff;
+        width: 250px;
+        .result-list-item{
+          padding: 5px;
+          cursor: pointer;
+          .search-list-number{
+            float: right;
+            .number{
+              color: #009ced;
+            }
+          }
+          &:hover{
+            background-color: #9cd9ff;
+            color: #fff;
+          }
+        }
+        .current{
+          background-color: #9cd9ff;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .hotel-content{
+    width: 1180px;
+    margin: 0 auto;
+    padding-top: 35px;
+  }
+  .no-data{
+    width: 1180px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    font-size: 17px;
+  }
+}
+
+.invitation-dialog {
+  width: 300px;
+  top: 100px;
+  .el-dialog__header {
+    padding: 20px 20px 0px 20px;
+    .el-dialog__headerbtn {
+      top: -10px;
+      right: -10px;
+      font-size: 23px;
+      background: #e6e6e6;
+      border-radius: 20px;
+      line-height: 23px;
+      border: 3px solid #ffffff;
+      .el-dialog__close {
+        color: #ffffff;
+      }
+    }
+  }
+
+  .el-dialog__body {
+    padding: 20px;
+  }
+}
